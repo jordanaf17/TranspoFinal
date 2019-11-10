@@ -1,0 +1,25 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CubeController : MonoBehaviour
+{
+    GameController myController;
+    public int myI;
+    public int myM;
+
+    void Start()
+    {
+        myController = GameObject.Find("GameControllerObject").GetComponent<GameController>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    public void OnMouseDown()
+    {
+        myController.ProcessClick(gameObject, myI, myM);
+    }
+}
